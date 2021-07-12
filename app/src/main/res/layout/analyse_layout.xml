@@ -1,0 +1,48 @@
+<ScrollView
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".controllers.AnalyseFragment" >
+<TableLayout
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:stretchColumns="1" >
+  <TableRow>
+  <Button
+  android:id="@+id/analyseOK"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:layout_column="1"
+  android:background="#AAAAFF"
+  android:text="analyse"
+  android:onClick="analyseOK"
+  />
+  <Button
+  android:id="@+id/analyseCancel"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:background="#FFAAAA"
+  android:layout_column="3"
+  android:text="Cancel"
+  android:onClick="analyseCancel"
+  />
+  </TableRow>
+
+  <ImageView
+      android:id="@+id/analyseResult"
+      android:layout_width="fill_parent"
+      android:layout_height="619dp"
+      android:adjustViewBounds="true" />
+
+<!-- view area for error message display -->
+  <TextView
+      android:id="@+id/errorTextField"
+      android:layout_height="57dp"
+      android:layout_span="4"
+      android:hint=""
+      android:textStyle="bold" />
+
+</TableLayout>
+</ScrollView>

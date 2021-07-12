@@ -1,0 +1,149 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".controllers.QueryFragment">
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:stretchColumns="1">
+
+        <TableRow>
+            <TextView
+                android:id="@+id/date1Label"
+                android:background="#EEFFBB"
+                android:hint="Start date "
+                android:text="Start Date "
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/date1Field"
+                android:hint="(yyyy-mm-dd)"
+                android:layout_span="4" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/date1Error"
+                android:layout_span="4"
+                android:textColor="#FF0000"
+                android:hint=""
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/date2Label"
+                android:background="#EEFFBB"
+                android:hint="End date "
+                android:text="End Date"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/date2Field"
+                android:hint="(yyyy-mm-dd)"
+                android:layout_span="4" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/date2Error"
+                android:layout_span="4"
+                android:textColor="#FF0000"
+                android:hint=""
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/rangeError"
+                android:layout_span="4"
+                android:textColor="#FF0000"
+                android:hint=""
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/share1Label"
+                android:background="#EEFFBB"
+                android:hint="Share symbol 1"
+                android:text="1st Share Symbol:"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/share1Field"
+                android:layout_span="4" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/share1Error"
+                android:layout_span="4"
+                android:textColor="#FF0000"
+                android:hint=""
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/share2Label"
+                android:background="#EEFFBB"
+                android:hint="Share symbol 2"
+                android:text="2nd Share Symbol "
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/share2Field"
+                android:hint="(Optional)"
+                android:layout_span="4" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/share2Error"
+                android:layout_span="4"
+
+                android:textColor="#FF0000"
+                android:hint=""
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow>
+            <Button
+                android:id="@+id/queryBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:background="#AAAAFF"
+                android:onClick="query"
+                android:text="Query" />
+
+            <Button
+                android:id="@+id/cancelBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="3"
+                android:background="#FFAAAA"
+                android:onClick="cancel"
+                android:text="Cancel" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/queryResultLabel"
+                android:background="#EEFFBB"
+                android:hint="Result of query"
+                android:text="Result of query:"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/queryResult"
+                android:layout_span="4"
+                android:hint="Result of query"
+                android:textStyle="bold" />
+        </TableRow>
+    </TableLayout>
+</ScrollView>
